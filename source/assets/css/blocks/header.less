@@ -35,7 +35,11 @@
             padding-left: 15px;
             padding-right: 15px;
             a {
-                color: @gold;
+                color: @black;
+                .transition(all 0.2s ease-out);
+                &:hover {
+                    color: @gold;
+                }
             }
         }
     }
