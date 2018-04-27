@@ -42,7 +42,7 @@ function featureGallery() {
         infinite: false
     });
     $('.feature-gallery .fea-nav').slick({
-        slidesToShow: 6,
+        slidesToShow: 7,
         slidesToScroll: 1,
         asNavFor: '.feature-gallery .fea-img',
         dots: false,
