@@ -207,7 +207,7 @@
         }
         position: relative;
         &.video {
-            max-height: 400px;
+            // max-height: 400px;
             position: relative;
             i {
                 position: absolute;
@@ -216,8 +216,12 @@
                 left: 50%;
                 width: 80px;
                 height: 80px;
-                padding: 20px;
-                margin: 40px 0 0 -40px;
+                // padding: 20px;
+                // margin: 40px 0 0 -40px;
+                -webkit-transform: translateX(-50%) translateY(-50%);
+                -moz-transform: translateX(-50%) translateY(-50%);
+                -o-transform: translateX(-50%) translateY(-50%);
+                transform: translateX(-50%) translateY(-50%);
                 background-color: rgba(136, 99, 18, 0.7);
                 background-position: center;
                 background-size: 30px 30px;
@@ -309,7 +313,7 @@
     }
     .fea-img {
         .slick-arrow {
-            display: none;
+            display: none !important;
             width: 35px;
             height: 35px;
             background-color: #555;
@@ -559,16 +563,26 @@
 .blk-feature {
     .fea-review {
         margin-bottom: 20px;
+        padding-top: 5px;
         .clearfix();
         li {
             float: left;
             width: 50%;
-            &:last-child {
-                text-align: right;
-            }
+            // &:last-child {
+            //     text-align: right;
+            // }
             a {
                 color: #8f8f8f;
                 font-size: 12px;
+                display: block;
+                border: 1px solid #ddd;
+                padding: 7px 0;
+                text-align: center;
+                &:hover {
+                    background-color: @gold;
+                    color: #fff;
+                    border-color: @gold;
+                }
                 i {
                     font-size: 16px;
                     margin-right: 5px;
