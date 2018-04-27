@@ -36,7 +36,7 @@ function featureGallery() {
     $('.feature-gallery .fea-img').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         fade: true,
         asNavFor: '.feature-gallery .fea-nav',
         infinite: false
@@ -129,15 +129,15 @@ $(document).ready(function($){
     // 3
     zoomGallery();
     // 4
-    homeScroll('.blk-desc', 'blk-desc', 20);
-    homeScroll('.blk-gallery', 'blk-gallery', 60);
-    homeScroll('.blk-article', 'blk-article', 40);
-    homeScroll('.blk-collection', 'blk-collection', 60);
-    homeScroll('.blk-prod-related', 'blk-prod-related', 40);
-    homeScroll('.blk-newsletter', 'blk-newsletter', 40);
-    homeScroll('.blk-authorized', 'blk-authorized', 20);
+    homeScroll('.blk-desc', 'blk-desc', 70);
+    homeScroll('.blk-gallery', 'blk-gallery', 80);
+    homeScroll('.blk-article', 'blk-article', 80);
+    homeScroll('.blk-collection', 'blk-collection', 80);
+    homeScroll('.blk-prod-related', 'blk-prod-related', 80);
+    homeScroll('.blk-newsletter', 'blk-newsletter', 80);
+    homeScroll('.blk-authorized', 'blk-authorized', 80);
     // 5.
-    showVideo('.fea-gal-item.video .fa-youtube-play');
+    showVideo('.fea-gal-item.video .ico-play');
     showVideo('.video_avt');
 });
 /* OnLoad Window */
