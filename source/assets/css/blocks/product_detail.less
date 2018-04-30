@@ -597,6 +597,9 @@
         margin-right: 5px;
         color: #b1b1b1;
         border: 1px solid transparent;
+        &.sc-wechat {
+            vertical-align: -2px;
+        }
         i {
             font-size: 18px;
             line-height: 40px;
@@ -608,6 +611,9 @@
             border-color: @gold;
             background-color: #fff;
             color: @gold;
+            .svg-social {
+                fill: @gold;
+            }
         }
     }
 }
@@ -627,12 +633,28 @@
         .col-payment {
             .fa {
                 font-size: 30px;
-                margin-right: 5px;
+                margin-left: 5px;
+                &:nth-of-type(1) {
+                    margin-left: 0;
+                }
             }
         }
     }
     .col-social {
         text-align: right;
+        .svg-social {
+            width: 18px;
+            fill: #b1b1b1;
+            padding-top: 10px;
+        }
+    }
+    .fea-payment {
+        .lg-amex {
+            display: inline-block;
+            width: 42px;
+            fill: #666;
+            vertical-align: -10px;
+        }
     }
 }
 // CSS FOOTER
@@ -1291,4 +1313,94 @@
 }
 .notice-sys {
     color: #999;
+}
+.gold {
+    color: @gold;
+}
+.bold {
+    font-weight: 700;
+}
+
+// CSS BLK PARALLAX
+.blk-parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 600px;
+}
+.lg-backdrop {
+    background-color: rgba(0,0,0,0.7);
+}
+.modal-backdrop {
+    position: fixed;
+    z-index: 1040;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+.modal {
+    z-index: 1041;
+}
+.modal-content {
+    .border-radius(0);
+    .ttl {
+        .fontPT(400);
+        margin-bottom: 20px;
+    }
+    .close-social {
+        color: #555;
+        font-size: 18px;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        z-index: 1;
+        &:hover {
+            color: @gold;
+        }
+    }
+    padding: 30px;
+    position: relative;
+    .text {
+        max-height: 600px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+         
+        /* Track */
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+         
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: #ddd; 
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+        }
+        &::-webkit-scrollbar-thumb:window-inactive {
+            background: #ddd; 
+        }
+    }
+}
+.modal-dialog {
+    width: 800px;
+}
+.lg-autoplay-button {
+    display: none;
+}
+.blk-video {
+    display: none;
+}
+.test.has-video {
+    width: 80px;
+    img {
+        width: 100%;
+    }
+}
+#my-video {
+    width: 100%;
 }

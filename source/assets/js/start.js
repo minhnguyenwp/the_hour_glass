@@ -6,6 +6,8 @@
  * 3. Zoom Gallery
  * 4. WAYPOINT
  * 5. Show Video
+ * 6. Light Gallery
+ * 7. Video Light Gallery
  */
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */
@@ -80,7 +82,7 @@ function zoomGallery() {
 /**
  * WAYPOINT
  */
-function homeScroll(itmScroll, name, offset) {
+function blockScroll(itmScroll, name, offset) {
     if(!$(itmScroll).length) { return; }
 
     var w_scroll_window = 0;
@@ -118,6 +120,34 @@ function showVideo(itemClick) {
         $(".video-item")[0].src += "&autoplay=1";
     });
 }
+/**
+ * 6. Light Gallery
+ */
+function funcLightGallery() {
+    if(!$('.fea-img .slick-track').length) {return; }
+
+    $('.fea-img .slick-track').lightGallery({
+        thumbnail:false,
+        share: false,
+        actualSize: false,
+        download: false
+    }); 
+}
+/**
+ * 7. Video Light Gallery
+ */
+function videoLigthGallery() {
+    if(!$('.fea-nav-itm.has-video').length) {return; }
+
+    $('.fea-nav-itm.has-video').lightGallery({
+        selector: 'this',
+        thumbnail:false,
+        share: false,
+        actualSize: false,
+        download: false,
+        videojs: true
+    });
+}
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -129,16 +159,20 @@ $(document).ready(function($){
     // 3
     zoomGallery();
     // 4
-    homeScroll('.blk-desc', 'blk-desc', 70);
-    homeScroll('.blk-gallery', 'blk-gallery', 80);
-    homeScroll('.blk-article', 'blk-article', 80);
-    homeScroll('.blk-collection', 'blk-collection', 80);
-    homeScroll('.blk-prod-related', 'blk-prod-related', 80);
-    homeScroll('.blk-newsletter', 'blk-newsletter', 80);
-    homeScroll('.blk-authorized', 'blk-authorized', 80);
+    blockScroll('.blk-desc', 'blk-desc', 70);
+    blockScroll('.blk-gallery', 'blk-gallery', 80);
+    blockScroll('.blk-article', 'blk-article', 80);
+    blockScroll('.blk-collection', 'blk-collection', 80);
+    blockScroll('.blk-prod-related', 'blk-prod-related', 80);
+    blockScroll('.blk-newsletter', 'blk-newsletter', 80);
+    blockScroll('.blk-authorized', 'blk-authorized', 80);
     // 5.
-    showVideo('.fea-gal-item.video .ico-play');
-    showVideo('.video_avt');
+    // showVideo('.fea-gal-item.video .ico-play');
+    // showVideo('.video_avt');
+    // 6.
+    funcLightGallery();
+    // 7.
+    videoLigthGallery();
 });
 /* OnLoad Window */
 var init = function () {   
