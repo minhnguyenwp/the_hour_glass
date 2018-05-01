@@ -1151,8 +1151,9 @@
                 // .fontCormo();
                 .fontPT(400);
                 // .fGogamBold();
-                padding-bottom: 3px;
+                padding-bottom: 0;
                 font-size: 40px;
+                margin-bottom: 0;
             }
         }
     }
@@ -1338,6 +1339,7 @@
     background-size: cover;
     background-attachment: fixed;
     min-height: 600px;
+    background-position: center;
 }
 .lg-backdrop {
     background-color: rgba(0,0,0,0.7);
@@ -1471,6 +1473,66 @@
             > b {
                 display: block;
             }
+        }
+    }
+}
+.gallery-mb {
+    display: none;
+}
+.blk-movement {
+    .move-ct {
+        .pic {
+            .transform(scale(1.4, 1.4));
+            .transition(all .8s ease .2s);
+        }
+        .txt {
+            .opacity(0);
+            .transition(all .8s ease .4s);
+            .transform(translateY(100px));
+        }
+    }
+    .w-round {
+        &.w-left {
+            .opacity(0);
+            .transition(all .8s ease .4s);
+            left: -200px;
+        }
+        &.w-right {
+            .opacity(0);
+            .transition(all .8s ease .4s);
+            right: -200px;
+        }
+    }
+    &.anima {
+        .move-ct {
+            .pic {
+                .transform(scale(1));
+            }
+            .txt {
+                .opacity(1);
+                .transform(translateY(0));
+            }
+        }
+        .w-round {
+            &.w-left {
+                .opacity(1);
+                left: -160px;
+            }
+            &.w-right {
+                .opacity(1);
+                right: -160px;
+            }
+        }
+    }
+    .move-tbl {
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -2;
+        height: 0;
+        .w-round {
+            position: relative;
+            display: inline-block;
         }
     }
 }

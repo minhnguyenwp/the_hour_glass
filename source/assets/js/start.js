@@ -8,6 +8,7 @@
  * 5. Show Video
  * 6. Light Gallery
  * 7. Video Light Gallery
+ * 8. Slider Gallery on Mobile
  */
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */
@@ -52,7 +53,15 @@ function featureGallery() {
         arrows: false,
         focusOnSelect: true,
         vertical: true,
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4
+              }
+            }
+        ]
     });
 }
 /**
@@ -148,6 +157,21 @@ function videoLigthGallery() {
         videojs: true
     });
 }
+/**
+ * 8. Slider Gallery on Mobile
+ */
+function sliderGalleryMobile() {
+    if(!$('.gallery-mb').length) { return; }
+
+    $('.gallery-mb').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: true,
+        dots: true,
+        // autoplay: true
+    });
+}
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -160,6 +184,7 @@ $(document).ready(function($){
     zoomGallery();
     // 4
     blockScroll('.blk-desc', 'blk-desc', 70);
+    blockScroll('.blk-movement', 'blk-movement', 80);
     blockScroll('.blk-gallery', 'blk-gallery', 80);
     blockScroll('.blk-article', 'blk-article', 80);
     blockScroll('.blk-collection', 'blk-collection', 80);
@@ -173,6 +198,8 @@ $(document).ready(function($){
     funcLightGallery();
     // 7.
     videoLigthGallery();
+    // 8. 
+    sliderGalleryMobile();
 });
 /* OnLoad Window */
 var init = function () {   

@@ -4,5 +4,196 @@
  * description: css rules for screen of old school smartphone
  */
 @media (max-width: 480px) {
-   
+    .footer-contact {
+        .foo-ttl {
+            font-size: 18px;
+        }
+    }
+    .banner-sale {
+        .ttl {
+            font-size: 12px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    .blk-desc {
+        .col-left, .col-right {
+           width: 100%;
+        }
+        .col-left {
+            margin-bottom: 20px;
+            .desc-blk {
+                &:last-child {
+                    width: 100%;
+                }
+            }
+        }
+        .desc-left {
+            .ttl {
+                margin-bottom: 40px;
+            }
+        }
+        .desc-blk {
+            margin-bottom: 20px;
+        }
+        .table {
+            > tbody {
+                > tr {
+                    > td {
+                        &:last-child {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blk-parallax {
+        min-height: 220px;
+    }
+    .blk-collection {
+        img {
+            height: 120px;
+        }
+    }
+    .model-item {
+        .info {
+            .model-ttl {
+                height: 100px;
+            }
+            .row {
+                margin-left: -5px;
+                margin-right: -5px;
+                [class*="col"] {
+                    padding-left: 2.5px;
+                    padding-right: 2.5px;
+                }
+            }
+        }
+    }
+    .blk-p {
+        margin-bottom: 40px;
+    }
+    .blk-prod-related {
+        margin-bottom: 80px;
+    }
+    .author-itm {
+        height: 200px;
+    }
+    .blk-authorized {
+        margin-bottom: 20px;
+    }
+    .header-wrap {
+        .hd-logo {
+            a {
+                padding-top: 30px;
+                img {
+                    width: 160px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 440px) {
+    .movement-center {
+        width: 100%;
+    }
+    .blk-movement {
+        .move-ct {
+            .txt {
+                text-align: center;
+            }
+        }
+    }
+    .blk-feature {
+        .fea-desc {
+            .col-xs-6 {
+                width: 50%;
+            }
+        }
+    }
+    .blk-authorized {
+        .col-sm-3 {
+            width: 100%;
+        }
+    }
+    .author-itm {
+        height: 400px;
+        .ttl {
+            font-size: 24px;
+        }
+    }
+    .footer-contact {
+        .foo-watch-talk, .foo-contact {
+            width: 100%;
+        }
+    }
+    .blk-prod-related {
+        .model-item {
+            width: 100%;
+        }
+    }
+    .model-item {
+        .info {
+            .model-ttl {
+                height: auto;
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .blk-feature {
+        .fea-special {
+            .spec-item {
+                width: 50%;
+                margin-bottom: 15px;
+                &:nth-of-type(3),&:nth-of-type(4) {
+                    margin-bottom: 0;
+                }
+                .wrap {
+                    height: 170px;
+                    padding-top: 60px;
+                }
+            }
+        }
+        .col-social, .col-payment {
+            width: 100%;
+            text-align: center;
+        }
+        .col-payment {
+            margin-bottom: 10px;
+        }
+    }
+    .author-itm {
+        height: 350px;
+    }
+    .blk-feature {
+        .fea-img {
+            width: 260px;
+            height: 260px;
+        }
+    }
+    .blk-parallax {
+        min-height: 180px;
+    }
+}
+@media (max-width: 340px) {
+    .blk-feature {
+        .fea-special {
+            .spec-item {
+                .wrap {
+                    height: 140px;
+                    padding-top: 40px;
+                }
+            }
+        }
+    }
+    .author-itm {
+        height: 280px;
+    }
+    .txtinput-newsletter {
+        .txt {
+            width: 65%;
+        }
+    }
 }
