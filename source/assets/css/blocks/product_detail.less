@@ -102,6 +102,11 @@
     .desc-left {
         .ttl {
             margin-bottom: 60px;
+            .sub-ttl {
+                margin-top: 10px;
+                .fontNunito();
+                font-size: 14px;
+            }
         }
     }
     .table {
@@ -374,12 +379,17 @@
     .fea-special {
         margin-bottom: 20px;
         .spec-item {
+            cursor: pointer;
             .wrap {
                 background-color: #f9f9f9;
                 height: 100px;
                 margin: 0 auto;
                 text-align: center;
                 padding-top: 20px;
+                .transition(all .3s ease);
+                &:hover {
+                    background-color: #eee;
+                }
                 .txt {
                     font-size: 12px;
                     &.bold {
@@ -585,7 +595,6 @@
 }
 
 .fea-social {
-    padding-top: 23px;
     a {
         display: inline-block;
         width: 40px;
@@ -642,7 +651,6 @@
         }
     }
     .col-social {
-        text-align: right;
         .svg-social {
             width: 18px;
             fill: #b1b1b1;
@@ -1000,6 +1008,13 @@
         .art-left, .art-right, .ttl {
             .opacity(1);
             .transform(translateX(0));
+        }
+    }
+}
+.art-right {
+    a {
+        &:hover {
+            color: @gold;
         }
     }
 }
