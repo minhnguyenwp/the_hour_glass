@@ -373,12 +373,17 @@
     .fea-special {
         margin-bottom: 20px;
         .spec-item {
+            cursor: pointer;
             .wrap {
                 background-color: #f9f9f9;
                 height: 100px;
                 margin: 0 auto;
                 text-align: center;
                 padding-top: 20px;
+                .transition(all .3s ease);
+                &:hover {
+                    background-color: #eee;
+                }
                 .txt {
                     font-size: 12px;
                     &.bold {
