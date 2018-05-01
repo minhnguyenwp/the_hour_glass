@@ -101,6 +101,11 @@
     .desc-left {
         .ttl {
             margin-bottom: 60px;
+            .sub-ttl {
+                margin-top: 10px;
+                .fontNunito();
+                font-size: 14px;
+            }
         }
     }
     .table {
@@ -589,7 +594,6 @@
 }
 
 .fea-social {
-    padding-top: 23px;
     a {
         display: inline-block;
         width: 40px;
@@ -646,7 +650,6 @@
         }
     }
     .col-social {
-        text-align: right;
         .svg-social {
             width: 18px;
             fill: #b1b1b1;
@@ -1004,6 +1007,13 @@
         .art-left, .art-right, .ttl {
             .opacity(1);
             .transform(translateX(0));
+        }
+    }
+}
+.art-right {
+    a {
+        &:hover {
+            color: @gold;
         }
     }
 }
