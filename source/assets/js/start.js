@@ -17,7 +17,7 @@
  */
 function setHeightBlkWatchDetails() {
     if(!$('.blk-desc').length
-    || $(window).width() < 768) { return;}
+    || $(window).width() <= 940) { return;}
 
     var h_col_left = $('.blk-desc .desc-left').outerHeight();
     $('.blk-desc .desc-right .inner').css('height', h_col_left);
