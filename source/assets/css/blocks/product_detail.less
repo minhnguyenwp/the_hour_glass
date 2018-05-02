@@ -887,12 +887,22 @@
             padding-right: 0;
         }
     }
-    img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-        .transition(all .4s ease);
+    .gallery-pc {
+        img {
+            width: 100%;
+            height: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            .transition(all .4s ease);
+        }
+    }
+    .gallery-mb {
+        img {
+            width: 100%;
+        }
+        .slick-slide {
+            height: auto;
+        }
     }
     a {
         display: block;
@@ -1535,4 +1545,7 @@
             display: inline-block;
         }
     }
+}
+.mn-mb {
+    display: none;
 }

@@ -90,15 +90,34 @@
             margin-bottom: 30px;
         }
     }
+    .mn-mb {
+        display: block;
+    }
     .header-wrap {
         .hd-menu {
             display: none;
-            // position: absolute;
-            // top: 100%;
-            // left: 0;
-            // right: 0;
-            // background-color: #f5f5f5;
-            // z-index: 100;
+            padding: 0;
+            &.shw {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #f9f9f9;
+                z-index: 100;
+                display: block;
+                width: 100%;
+                right: 0;
+            }
+            ul {
+                padding-left: 10px;
+            }
+            li {
+                float: none;
+                line-height: normal;
+                padding: 10px 0;
+                a {
+                    font-size: 14px;
+                }
+            }
         }
         .hd-logo {
             width: 100%;
@@ -174,6 +193,12 @@
 }
 
 @media (max-width: 940px) {
+    .blk-desc {
+        .container {
+            width: 580px;
+            margin: 0 auto;
+        }
+    }
     .blk-feature {
         .fea-left, .fea-right {
             width: 100%;
