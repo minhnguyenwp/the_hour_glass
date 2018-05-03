@@ -4,6 +4,9 @@
  * description: css rules for screen of new moderm smartphone
  */
 @media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
     .modal-dialog {
         width: 90%;
         margin:  0 auto;
@@ -196,6 +199,56 @@
     .gallery-pc {
         display: none;
     }
+    .fea-nav {
+        // li {
+        //     &.has-video {
+        //         display: none;
+        //     }
+        // }
+        .slick-arrow {
+            width: 60px;
+            height: 20px;
+            text-align: center;
+            // border: 1px solid @gold;
+            background-color: @gold;
+            &.slick-prev, &.slick-next {
+                &::before {
+                    .fontAwesome();
+                    color: #fff;
+                }
+                &.slick-disabled {
+                    background-color: #eee;
+                    opacity: 1;
+                    &::before {
+                        color: #555;
+                    }
+                }
+            }
+            &.slick-prev {
+                left: 0;
+                top: -15px;
+                &::before {
+                    content: '\f106';
+                }
+            }
+            &.slick-next {
+                right: 0;
+                bottom: -15px;
+                top: auto;
+                .transform(translateY(0));
+                &::before {
+                    content: '\f107';
+                }
+            }
+        }
+    }
+    // .blk-feature {
+    //     .fea-gal-item {
+    //         &.video {
+    //             display: none;
+    //         }
+    //     }
+    // }
 }
 
 @media (max-width: 640px) {

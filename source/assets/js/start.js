@@ -58,7 +58,8 @@ function featureGallery() {
             {
               breakpoint: 768,
               settings: {
-                slidesToShow: 4
+                slidesToShow: 4,
+                arrows: true
               }
             }
         ]
@@ -68,7 +69,8 @@ function featureGallery() {
  * 3. Zoom Gallery
  */
 function zoomGallery() {
-    if(!$('.fea-gal-item').length) { return;}
+    if(!$('.fea-gal-item').length
+    || $(window).width() < 768) { return;}
 
     $('.fea-gal-item').each(function(i) {
         if($(this).hasClass('video')) { return; }
@@ -177,7 +179,7 @@ function sliderGalleryMobile() {
 /* OnLoad Page */
 $(document).ready(function($){
     // 1.
-    setHeightBlkWatchDetails();
+    // setHeightBlkWatchDetails();
     // 2.
     featureGallery();
     // 3
