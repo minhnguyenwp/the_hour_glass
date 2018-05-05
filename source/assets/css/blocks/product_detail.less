@@ -109,10 +109,26 @@
         }
     }
     .sml-ttl {
-        color: #999;
-        font-weight: 700;
+        // color: #999;
+        color: #555;
+        text-transform: uppercase;
+        position: relative;
+        // font-weight: 700;
+        font-weight: 400;
         font-size: 18px;
         margin-bottom: 15px;
+        padding-bottom: 10px;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 3px;
+            background-color: #555;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
     }
     .txt {
         p {
@@ -137,6 +153,7 @@
     }
     .table {
         font-size: 14px;
+        margin-bottom: 0;
         >tbody {
             > tr {
                 > td {
@@ -144,13 +161,19 @@
                     padding: 5px 0;
 
                     &:first-child {
-                        width: 120px;
+                        width: 160px;
                     }
                 }
             }
         }
     }
     .desc-blk {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .desc-col {
         margin-bottom: 60px;
         &:last-child {
             margin-bottom: 0;
@@ -519,7 +542,8 @@
 }
 .blk-feature {
     .fea-desc {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
         p {
             margin-bottom: 0;
             &.desc-ttl {
@@ -537,9 +561,9 @@
     .fea-button {
         margin-bottom: 10px;
         padding-top: 10px;
-        padding-bottom: 10px;
+        // padding-bottom: 10px;
         border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
+        // border-bottom: 1px solid #ddd;
         .row {
             margin-left: -5px;
             margin-right: -5px;
@@ -690,6 +714,24 @@
             width: 42px;
             fill: #666;
             vertical-align: -10px;
+        }
+    }
+}
+.blk-feature {
+    .fea-color {
+        position: relative;
+        // border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        // margin-bottom: 15px;
+        i {
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            .transform(translateY(-50%));
+            right: 10px;
+            z-index: 1;
         }
     }
 }

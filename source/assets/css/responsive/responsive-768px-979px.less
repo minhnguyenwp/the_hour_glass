@@ -216,6 +216,22 @@
                 width: 100%;
             }
         }
+        .table {
+            > tbody {
+                > tr {
+                    > td {
+                        &:first-child {
+                            width: 120px;
+                        }
+                    }
+                }
+            }
+        }
+        .desc-col {
+            &:nth-of-type(3) {
+                clear: left;
+            }
+        }
     }
     .blk-feature {
         .fea-left, .fea-right {
