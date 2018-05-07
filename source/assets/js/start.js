@@ -9,6 +9,7 @@
  * 6. Light Gallery
  * 7. Video Light Gallery
  * 8. Slider Gallery on Mobile
+ * 9. Show More Story
  */
 /* ----------------------------------------------- */
 /* ------------- FrontEnd Functions -------------- */
@@ -174,6 +175,38 @@ function sliderGalleryMobile() {
         // autoplay: true
     });
 }
+/**
+ * 9. Show More Story
+ */
+function showMoreStory() {
+    if(!$('.blk-desc .desc-right .txt').length) { return; }
+
+    var story_h = $('.blk-desc .desc-right .txt').outerHeight();
+
+    if(story_h > 160) {
+        $('.blk-desc .desc-right .txt').addClass('more');
+        $('.blk-desc .desc-right .shw_more').addClass('act');
+
+        $('.blk-desc .desc-right .shw_more').on('click', function(e) {
+            e.preventDefault();
+
+            var $a_more = $(this),
+                $text   = $a_more.siblings('.txt');
+
+            if($a_more.hasClass('clicked')) {
+                $a_more.removeClass('clicked');
+                $text.addClass('more');
+
+                $a_more.text('read more');
+            } else {
+                $a_more.addClass('clicked');
+                $text.removeClass('more');
+
+                $a_more.text('read less');
+            }
+        }); 
+    }
+}
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
 /* OnLoad Page */
@@ -202,6 +235,8 @@ $(document).ready(function($){
     videoLigthGallery();
     // 8. 
     sliderGalleryMobile();
+    // 9.
+    showMoreStory();
 });
 /* OnLoad Window */
 var init = function () {   
